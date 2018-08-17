@@ -1,0 +1,26 @@
+{
+  "name": "cyril",
+  "version": "1.0.0",
+  "description": "Cyril Bot for Discord",
+  "main": "Core.js",
+  "scripts": {
+    "test": "ping"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmilBInv/Cyril.git"
+  },
+  "keywords": [
+    "Bot",
+    "Discord",
+    "CMD",
+    "Handler",
+    "Whatever"
+  ],
+  "author": "Emil Barranco | Rehsa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmilBInv/Cyril/issues"
+  },
+  "homepage": "https://github.com/EmilBInv/Cyril#readme"
+}
