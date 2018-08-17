@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const AI = new Discord.Client();
+const config = require('./config.js');
 
 AI.on("ready", async () => {
    AI.user.setActivity("#help", {type: "STREAMING", url: "https://twitch.tv/nou"});
