@@ -1,6 +1,19 @@
+/*Developer: Asher | Emil Barranco*/
+//JavaScript Project #2 | InvAI
+/* Inv's AI Sections:                      \/('O_O')\/
+     Section          |       Role          \  ^_^  /
+      Help            |     @everyone        \ *_* / InvTech's First AI  Nova
+      Apps            |     @everyone         \^_^/  InvTech's First AI  Star
+      Search          |     @Star              \./   InvTech's First AI  Rocket
+      Mod Permissions |     @Nova               *    InvTech's First AI  Steel
+      Rules           |     @everyone                InvTech's First AI  Base
+*/
+
+//~~~~~~~~~~~~~~~Basic Constants~~~~~~~~~~~~~~~~~~~~~~
 const Discord = require('discord.js');
 const AI = new Discord.Client();
 const config = require('./config.json');
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 AI.on("ready", async () => {
    AI.user.setActivity("#help", {type: "STREAMING", url: "https://twitch.tv/nou"});
