@@ -23,4 +23,7 @@
     "url": "https://github.com/EmilBInv/Cyril/issues"
   },
   "homepage": "https://github.com/EmilBInv/Cyril#readme"
+"dependencies": {
+    "discord.js": "^11.3.2"
+ }
 }
