@@ -13,7 +13,6 @@
 const Discord = require('discord.js');
 const AI = new Discord.Client();
 const config = require('./config.json');
-const package = require('package.json');
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 AI.on("ready", async () => {
@@ -34,7 +33,7 @@ AI.on("message", async (message) => {
                 .setTitle("Error :x:")
                 .setColor("db1212")
                 .setDescription("DM Commands are not allowed!")
-                .setFooter(`Version ` + package.version)
+                .setFooter(`Version 1.0.0`)
             message.channel.send(embed1)
             return;
         }
