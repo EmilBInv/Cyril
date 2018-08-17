@@ -13,6 +13,7 @@
 const Discord = require('discord.js');
 const AI = new Discord.Client();
 const config = require('./config.json');
+const package = require('package.json');
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 AI.on("ready", async () => {
