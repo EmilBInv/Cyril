@@ -8,7 +8,7 @@ const info = new Discord.RichEmbed()
 .addField('Commands:', 'General Purpose: "#", Admin: "~"')
 .setFooter('Actual Server: ' + `${message.guild.name}`, message.guild.iconURL)
 .addField("Developed for:", "InTrace Project", true)
-.setImage("https://media.giphy.com/media/OAQGvZClyvjSo/giphy.gif")
+.setImage("https://media.giphy.com/media/NyUZkUUo5e3xm/giphy.gif")
 .setTimestamp()
 message.channel.send(info)
 }
