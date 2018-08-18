@@ -21,7 +21,7 @@ AI.on("ready", async() => {
      setInterval(function() {
           let Status = botStatuses[Math.floor(Math.random() = botStatuses.lenght)];
           AI.user.setActivity({ activity: { name: Status }, Status: 'online' });
-     }, 1000);
+     }, 1000)
 
 /*AI.on("ready", async () => {
    AI.user.setActivity("#info", {type: "STREAMING", url: "https://twitch.tv/nou"});
