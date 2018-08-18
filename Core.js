@@ -30,12 +30,8 @@ AI.on("message", async (message) => {
    const funct = args.shift().toLowerCase();
    const swearWords = ["darn", "shucks", "frak", "shite"];
      if( swearWords.some(word => message.content.includes(word)) ) {
-          message.delete();
-          let embed = new Discord.RichEmbed()
-          .addField("Oh no you said a bad word!!!", true)
-          .setColor("#7429AA")
-          .setTimestamp()
-          return await message.channel.send({embed});
+       message.delete();
+       message.reply("Oh no you said a bad word!!!");
      }
    try {
         if (message.channel.type === "dm") {
