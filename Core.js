@@ -15,12 +15,12 @@ const AI = new Discord.Client();
 const config = require('./config.json');
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-let botStatuses = ['In Development: Basic Functions', 'In Development: Commands', 'In Development: Skills'];
+let statuses = ['In Development: Basic Functions', 'In Development: Commands', 'In Development: Skills'];
 
-AI.on("ready", async() => {
+AI.on("ready", () => {
      setInterval(function() {
-          let Status = botStatuses[Math.floor(Math.random() = botStatuses.lenght)];
-          AI.user.setActivity({ activity: { name: Status }, Status: 'online' });
+          let status = botStatuses[Math.floor(Math.random() * statuses.lenght)];
+          AI.user.setActivity({ activity: { name: status }, status: 'online' });
      }, 1000)
 
 /*AI.on("ready", async () => {
