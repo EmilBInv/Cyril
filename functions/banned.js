@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 exports.run = (AI, message, args) => {
-  let blackList = ['http://www.bannedwordlist.com/lists/swearWords.txt'];
+  let blackList = ['fuck', 'bitch', 'slut'];
   let foundInText = false;
   for(var i in blackList) {
     if(message.content.toLowerCase().includes(toLowerCase())) foundInText = true;
