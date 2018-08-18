@@ -25,7 +25,7 @@ AI.on("ready", async () => {
 //const messageReplace = "Do not swear, we try to keep a safe environment for all :blush:";  
 AI.on("message", async (message) => {
    if (message.author.bot) return;
-   const swearWords = "http://www.bannedwordlist.com/lists/swearWords.txt";
+   const swearWords = require("banned.txt");
      if( swearWords.some(word => message.content.includes(word)) ) {
           message.delete()
           let embed = new Discord.RichEmbed()
