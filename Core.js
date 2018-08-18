@@ -30,8 +30,8 @@ AI.on("message", async (message) => {
    const command = args.shift().toLowerCase();
      
    //-----------------Banned Words-----------------
-const args = message.content();
-const swear = args.shift().toLowerCase();
+const nou = message.content();
+const swear = nou.shift().toLowerCase();
  if (swear === 'nairobi') {
       message.delete()
       message.channel.send("NOU nairobi de referencia >:D")
