@@ -27,6 +27,7 @@ AI.on("message", async (message) => {
    if (message.content.indexOf(config.prefix) !== 0) return;
    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
    const command = args.shift().toLowerCase();
+   const funct = args.shift().toLowerCase();
    try {
         if (message.channel.type === "dm") {
             let embed1 = new Discord.RichEmbed() //info embed on ticket
@@ -37,8 +38,11 @@ AI.on("message", async (message) => {
             message.channel.send(embed1)
             return;
         }
+    let functionFile = require(`./functions/${funct}.js`);
+        functionFile.run(AI, message, args);
     let commandFile = require(`./commands/${command}.js`);
         commandFile.run(AI, message, args);
+        
     } catch (err) {
       console.error(err);
     }
