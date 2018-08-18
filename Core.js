@@ -30,7 +30,7 @@ AI.on("message", async (message) => {
    const command = args.shift().toLowerCase();
      
    //-----------------Banned Words-----------------
-const args = message.content.();
+const args = message.content();
 const swear = args.shift().toLowerCase();
  if (swear === 'nairobi') {
       message.delete()
