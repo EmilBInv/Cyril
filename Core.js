@@ -1,6 +1,6 @@
 /*Developer: Asher | Emil Barranco*/
 //JavaScript Project #2 | InvAI
-/* Elliot's AI Sections:                      \/('O_O')\/
+/* Elliot's AI Sections:                   \/('O_O')\/
      Section          |       Role          \  ^_^  /
       Help            |     @everyone        \ *_* / InvTech's First AI  Nova
       Apps            |     @everyone         \^_^/  InvTech's First AI  Star
@@ -16,7 +16,7 @@ const config = require('./config.json');
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 AI.on("ready", async () => {
-   AI.user.setActivity("#help", {type: "STREAMING", url: "https://twitch.tv/nou"});
+   AI.user.setActivity("#info", {type: "STREAMING", url: "https://twitch.tv/nou"});
    console.log("Upgrading...");
    console.log(`Serving ${AI.users.size} users.`);
    console.log(`Serving ${AI.guilds.size} guilds.`);
