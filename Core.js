@@ -30,11 +30,12 @@ AI.on("message", async (message) => {
    const command = args.shift().toLowerCase();
      
    //-----------------Banned Words-----------------
-   const noWords = ["fuck", "bitch", "shit"];
-   if(message.content === "fuck") {
-        message.delete();
-        //message.channel.send("Hey! That kind of word is not allowed here! :neutral_face:");
-      }
+const args = message.content.();
+const swear = args.shift().toLowerCase();
+ if (swear === 'nairobi') {
+      message.delete()
+      message.channel.send("NOU nairobi de referencia >:D")
+ }
    //----------------------------------------------
    /*let edit = message.content.replace(/asshole/gi, messageReplace);
     message.delete();
