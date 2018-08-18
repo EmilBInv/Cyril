@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 exports.run = (AI, message, args) => {
-  AI.on('message', async (message) => {
+  AI.on('message', async message => {
     let blackList = ['fuck', 'bitch', 'slut'];
     let foundInText = false;
     for(var i in blackList) {
