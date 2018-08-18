@@ -34,7 +34,7 @@ AI.on("message", async (message) => {
    if(message.content.includes(noWords)) {
         message.delete();
         message.channel.send("Hey! That kind of word is not allowed here! :neutral_face:");
-      });
+      }
    //----------------------------------------------
    /*let edit = message.content.replace(/asshole/gi, messageReplace);
     message.delete();
