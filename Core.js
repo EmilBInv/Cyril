@@ -22,7 +22,7 @@ AI.on("ready", async () => {
    console.log(`Serving ${AI.guilds.size} guilds.`);
   });
 
-const messageReplace = "Do not swear, we try to keep a safe environment for all :blush:";  
+//const messageReplace = "Do not swear, we try to keep a safe environment for all :blush:";  
 AI.on("message", async (message) => {
    if (message.author.bot) return;
    if (message.content.indexOf(config.prefix) !== 0) return;
@@ -31,7 +31,7 @@ AI.on("message", async (message) => {
      
    //-----------------Banned Words-----------------
    let noWords = ['fuck', 'bitch', 'shit'];
-   if(message.content.includes(noWords) {\
+   if(message.content.includes(noWords) {
       message.delete();
      message.channel.send("Hey! That kind of word is not allowed here! :neutral_face:");
       });
