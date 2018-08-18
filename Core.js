@@ -27,7 +27,10 @@ AI.on("message", async (message) => {
    if (message.author.bot) return;
    const swearWords = ["darn", "shucks", "frak", "shite"];
      if( swearWords.some(word => message.content.includes(word)) ) {
-          message.reply("Oh no you said a bad word!!!");
+          let embed = new Discord.RichEmbed()
+          .addField("Oh no you said a bad word!!!")
+          .setColor("#7429AA")
+          .setTimestamp()
           // Or just do message.delete();
      }
    if (message.content.indexOf(config.prefix) !== 0) return;
