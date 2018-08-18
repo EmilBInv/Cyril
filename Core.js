@@ -27,11 +27,10 @@ AI.on("message", async (message) => {
    if (message.content.indexOf(config.prefix) !== 0) return;
    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
    const command = args.shift().toLowerCase();
-   const funct = args.shift().toLowerCase();
    let edit = message.content.replace(/asshole/gi, swearWords);
     message.delete();
     message.channel.send(`${message.author.username}: ${edit}`);
-}
+
    try {
         if (message.channel.type === "dm") {
             let embed1 = new Discord.RichEmbed() //info embed on ticket
