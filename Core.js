@@ -21,18 +21,17 @@ AI.on("ready", async () => {
    console.log(`Serving ${AI.users.size} users.`);
    console.log(`Serving ${AI.guilds.size} guilds.`);
   });
-  
+const swearWords = ["darn", "shucks", "frak", "shite"];  
 AI.on("message", async (message) => {
    if (message.author.bot) return;
    if (message.content.indexOf(config.prefix) !== 0) return;
    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
    const command = args.shift().toLowerCase();
    const funct = args.shift().toLowerCase();
-   const swearWords = ["darn", "shucks", "frak", "shite"];
-     if( swearWords.some(word => message.content.includes(word)) ) {
-       message.delete();
-       message.reply("Oh no you said a bad word!!!");
-     }
+   let edit = message.content.replace(/asshole/gi, swearWords);
+    message.delete();
+    message.channel.send(`${message.author.username}: ${edit}`);
+}
    try {
         if (message.channel.type === "dm") {
             let embed1 = new Discord.RichEmbed() //info embed on ticket
