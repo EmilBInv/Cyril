@@ -21,15 +21,24 @@ AI.on("ready", async () => {
    console.log(`Serving ${AI.users.size} users.`);
    console.log(`Serving ${AI.guilds.size} guilds.`);
   });
+
 const messageReplace = "Do not swear, we try to keep a safe environment for all :blush:";  
 AI.on("message", async (message) => {
    if (message.author.bot) return;
    if (message.content.indexOf(config.prefix) !== 0) return;
    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
    const command = args.shift().toLowerCase();
-   let edit = message.content.replace(/asshole/gi, messageReplace);
+     
+   //-----------------Banned Words-----------------
+   let noWords = ['fuck', 'bitch', 'shit'];
+   if(message.content.includes(noWords) {\
+      message.delete();
+     message.channel.send("Hey! That kind of word is not allowed here! :neutral_face:");
+      });
+   //----------------------------------------------
+   /*let edit = message.content.replace(/asshole/gi, messageReplace);
     message.delete();
-    message.channel.send(`${message.author.username}: ${edit}`);
+    message.channel.send(`${message.author.username}: ${edit}`);*/
 
    try {
         if (message.channel.type === "dm") {
