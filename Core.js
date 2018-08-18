@@ -31,6 +31,7 @@ AI.on("message", async (message) => {
           .addField("Oh no you said a bad word!!!")
           .setColor("#7429AA")
           .setTimestamp()
+          message.channel.send(embed);
           // Or just do message.delete();
      }
    if (message.content.indexOf(config.prefix) !== 0) return;
