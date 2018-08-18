@@ -21,13 +21,13 @@ AI.on("ready", async () => {
    console.log(`Serving ${AI.users.size} users.`);
    console.log(`Serving ${AI.guilds.size} guilds.`);
   });
-const swearWords = ["darn", "shucks", "frak", "shite"];  
+const messageReplace = "Do not swear, we try to keep a safe environment for all :blush:";  
 AI.on("message", async (message) => {
    if (message.author.bot) return;
    if (message.content.indexOf(config.prefix) !== 0) return;
    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
    const command = args.shift().toLowerCase();
-   let edit = message.content.replace(/asshole/gi, swearWords);
+   let edit = message.content.replace(/asshole/gi, messageReplace);
     message.delete();
     message.channel.send(`${message.author.username}: ${edit}`);
 
@@ -41,8 +41,7 @@ AI.on("message", async (message) => {
             message.channel.send(embed1)
             return;
         }
-    let functionFile = require(`./functions/${funct}.js`);
-        functionFile.run(AI, message, args);
+   
     let commandFile = require(`./commands/${command}.js`);
         commandFile.run(AI, message, args);
         
