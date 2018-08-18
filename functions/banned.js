@@ -4,7 +4,7 @@ exports.run = (AI, message, args) => {
     let blackList = ['fuck', 'bitch', 'slut'];
     let foundInText = false;
     for(var i in blackList) {
-      if(message.content.toLowerCase().includes(toLowerCase())) foundInText = true;
+      if(message.content.toLowerCase().includes(blackList[i].toLowerCase())) foundInText = true;
     }
     if(foundInText) {
       message.delete();
