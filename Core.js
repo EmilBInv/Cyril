@@ -28,6 +28,15 @@ AI.on("message", async (message) => {
    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
    const command = args.shift().toLowerCase();
    const funct = args.shift().toLowerCase();
+   const swearWords = ["darn", "shucks", "frak", "shite"];
+     if( swearWords.some(word => message.content.includes(word)) ) {
+          message.delete();
+          let embed = new Discord.RichEmbed()
+          .addField("Oh no you said a bad word!!!", true)
+          .setColor("#7429AA")
+          .setTimestamp()
+          return await message.channel.send({embed});
+     }
    try {
         if (message.channel.type === "dm") {
             let embed1 = new Discord.RichEmbed() //info embed on ticket
