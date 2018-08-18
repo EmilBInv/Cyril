@@ -30,7 +30,7 @@ AI.on("message", async (message) => {
    const command = args.shift().toLowerCase();
      
    //-----------------Banned Words-----------------
-const nou = message.content();
+const nou = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const swear = nou.shift().toLowerCase();
  if (swear === 'nairobi') {
       message.delete()
