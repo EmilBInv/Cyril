@@ -28,7 +28,7 @@ AI.on("message", async (message) => {
    const swearWords = ["darn", "shucks", "frak", "shite"];
      if( swearWords.some(word => message.content.includes(word)) ) {
           let embed = new Discord.RichEmbed()
-          .addField("Oh no you said a bad word!!!")
+          .addField("Oh no you said a bad word!!!", true)
           .setColor("#7429AA")
           .setTimestamp()
           message.channel.send(embed);
