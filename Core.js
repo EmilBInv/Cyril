@@ -25,17 +25,16 @@ AI.on("ready", async () => {
 //const messageReplace = "Do not swear, we try to keep a safe environment for all :blush:";  
 AI.on("message", async (message) => {
    if (message.author.bot) return;
+   const swearWords = ["darn", "shucks", "frak", "shite"];
+     if( swearWords.some(word => message.content.includes(word)) ) {
+          message.reply("Oh no you said a bad word!!!");
+          // Or just do message.delete();
+     }
    if (message.content.indexOf(config.prefix) !== 0) return;
    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
    const command = args.shift().toLowerCase();
      
    //-----------------Banned Words-----------------
-const nou = message.content.slice(config.prefix.length).trim().split(/ +/g);
-const swear = nou.shift().toLowerCase();
- if (swear === 'nairobi') {
-      message.delete()
-      message.channel.send("NOU nairobi de referencia >:D")
- }
    //----------------------------------------------
    /*let edit = message.content.replace(/asshole/gi, messageReplace);
     message.delete();
