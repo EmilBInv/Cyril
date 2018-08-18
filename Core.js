@@ -15,12 +15,20 @@ const AI = new Discord.Client();
 const config = require('./config.json');
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-AI.on("ready", async () => {
+let botStatuses = ['In Development: Basic Functions', 'In Development: Commands', 'In Development: Skills'];
+
+AI.on("ready", async() => {
+     setInterval(function() {
+          let Status = botStatuses[Math.floor(Math.random() = botStatuses.lenght)];
+          AI.user.setActivity({ activity: { name: Status }, Status: 'online' });
+     }, 1000);
+
+/*AI.on("ready", async () => {
    AI.user.setActivity("#info", {type: "STREAMING", url: "https://twitch.tv/nou"});
    console.log("Upgrading...");
    console.log(`Serving ${AI.users.size} users.`);
    console.log(`Serving ${AI.guilds.size} guilds.`);
-  });
+  });*/
   
 AI.on("message", async (message) => {
    if (message.author.bot) return;
