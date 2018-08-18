@@ -31,7 +31,7 @@ AI.on("message", async (message) => {
      
    //-----------------Banned Words-----------------
    const noWords = ["fuck", "bitch", "shit"];
-   if(message.content.includes(noWords)) {
+   if(message.content === "fuck") {
         message.delete();
         //message.channel.send("Hey! That kind of word is not allowed here! :neutral_face:");
       }
