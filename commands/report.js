@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 exports.run = (AI, message, args) => {
-  let rUser = message.guild.member(message.guild.members.get(args[0]));
+  let rUser = message.guild.member(message.mentions.first() || message.guild.members.get(args[0]));
   if (!rUser)
     return message.channel.send("Sorry... Couldn't find the user. :frowning:");
   let repReason = args.join(" ").slice(22);
