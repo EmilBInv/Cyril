@@ -4,7 +4,7 @@ exports.run = (AI, message, args) => {
 AI.on('message', async message => {
   if (message.content === "#cmds") {
     let embed = new Discord.RichEmbed()
-    .setColor('#CB4335')
+    .setColor('#2E86C1')
     .setDescription("Here are the Basic Commands for InvAI.")
     .setThumbnail("https://media.giphy.com/media/xTiTnwtxXU2SbrTsmA/giphy.gif")
     .addField("Help", "#help", true)
