@@ -8,10 +8,11 @@ exports.run = (AI, message, args) => {
   let reportEmbed = new Discord.RichEmbed()
     .setDescription("Report")
     .setColor("#2E86C1")
-    .addField(":anger: Reported User", `${rUser}`)
-    .addField(":speaking_head: Reported By", `${message.author}`)
-    .addField(":exclamation: Reason", repReason)
-    .addField(":closed_book: Channel", message.channel)
+    .addField(":anger: Reported User:", `${rUser}`)
+    .addField(":speaking_head: Reported By:", `${message.author}`)
+    .addField(":exclamation: Reason:", repReason)
+    .addField(":closed_book: Channel:", message.channel)
+    .setThumbnail("https://media.giphy.com/media/3SZUsUsZvSpJm/giphy.gif")
     .setTimestamp();
 
   let reportsChannel = message.guild.channels.find(`name`, "reports");
