@@ -16,7 +16,7 @@ const config = require('./config.json');
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 AI.on("ready", async () => {
-   AI.user.setActivity("#info", {type: "STREAMING", url: "https://twitch.tv/nou"});
+   AI.user.setActivity("#info | #cmds", {type: "STREAMING", url: "https://twitch.tv/nou"});
    console.log("Upgrading...");
    console.log(`Serving ${AI.users.size} users.`);
    console.log(`Serving ${AI.guilds.size} guilds.`);
