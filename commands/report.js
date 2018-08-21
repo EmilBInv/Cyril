@@ -3,8 +3,6 @@ exports.run = (AI, message, args) => {
   let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if (!rUser)
     return message.channel.send("Sorry... Couldn't find the user. :frowning:");
-  else if(rUser = "" || " ")
-    return message.channel.send("You must mention someone to add a #report. :thinking:");
   let repReason = args.join(" ").slice(22);
 
   let reportEmbed = new Discord.RichEmbed()
