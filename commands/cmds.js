@@ -15,7 +15,8 @@ AI.on('message', async message => {
     .addField(":blue_book: Rules", "#rls => Rules of Usage", true)
     .setFooter(`${message.guild.name}`, message.guild.iconURL)
     .setTimestamp()
-    return await message.channel.send({embed});
+    message.channel.send("I sent you in PM the Commands. :upside_down:");
+    message.author.send({embed});
   }
 });
 }
