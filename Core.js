@@ -1,12 +1,12 @@
 /*Developer: Asher | Emil Barranco*/
-//JavaScript Project #2 | InvAI
-/* Elliot's AI Sections:                   \/('O_O')\/
+//JavaScript Project | Cyril
+/* Cyril's AI Sections:                    \/('O_O')\/
      Section          |       Role          \  ^_^  /
-      Help            |     @everyone        \ *_* / InvTech's First AI  Nova
-      Apps            |     @everyone         \^_^/  InvTech's First AI  Star
-      Search          |     @Star              \./   InvTech's First AI  Rocket
-      Mod Permissions |     @Nova               *    InvTech's First AI  Steel
-      Rules           |     @everyone                InvTech's First AI  Base
+      Help            |     @everyone        \ *_* /     InTrace's First AI  Nova   >
+      Apps            |     @everyone         \^_^/      InTrace's First AI  Star   > > 
+      Search          |     @Star              \./       InTrace's First AI  Rocket > > > Personal Guild Roles
+      Mod Permissions |     @Nova               *        InTrace's First AI  Steel  > >
+      Rules           |     @everyone                    InTrace's First AI  Base   >
 */
 
 //~~~~~~~~~~~~~~~Basic Constants~~~~~~~~~~~~~~~~~~~~~~
