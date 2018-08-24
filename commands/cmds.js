@@ -15,7 +15,6 @@ AI.on('message', async message => {
     .addField(":blue_book: Rules", "#rls => Rules of Usage", true)
     .setFooter(`${message.guild.name}`, message.guild.iconURL)
     .setTimestamp()
-    message.channel.send("I sent you by PM the Commands. :upside_down:");
     message.author.send({embed});
     let extra = new Discord.RichEmbed()
     .addField("My Commands were sent by PM :wink:...")
