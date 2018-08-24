@@ -17,8 +17,9 @@ AI.on('message', async message => {
     .setTimestamp()
     message.author.send({embed});
     let extra = new Discord.RichEmbed()
-    .addField("My Commands were sent by PM :wink:...")
+    .addField("My Commands were sent by PM :wink:...", true)
     .setColor("#2E86C1")
+    .setTimestamp()
     .setFooter("Server: " + `${message.guild.name}`, message.guild.iconURL);
     message.channel.send({embed: extra});
   }
