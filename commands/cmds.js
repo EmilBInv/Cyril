@@ -20,7 +20,7 @@ AI.on('message', async message => {
     .addField("My Commands were sent by PM :wink:...")
     .setColor("#2E86C1")
     .setFooter("Server: " + `${message.guild.name}`, message.guild.iconURL);
-    message.channel.send({extra});
+    message.channel.send({embed: extra});
   }
 });
 }
