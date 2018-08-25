@@ -7,11 +7,12 @@ exports.run = (AI, message, args) => {
       member.kick('Optional reason that will display in the audit logs').then(() => {
       const info = new Discord.RichEmbed()
       .setAuthor("Cyril | Mod", "")
-      .addField(`Successfully kicked:`,  `${user.avatarURL}`)
-      .setColor('#2E86C1')
+      .addField(`:triumph: Successfully kicked:`,  `${user}`)
+      .setColor('#424949')
+      .setTimestamp();
       message.channel.send(info)
     }).catch(err => {
-          message.reply('Sorry, I was unable to kick the member :frown:');
+          message.reply('Sorry, I was unable to kick the member :frowning:');
           console.error(err);
         });
       } else {
