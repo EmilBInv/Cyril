@@ -4,16 +4,15 @@ exports.run = (AI, message, args) => {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-        member.ban({
+        let banReason = args.join(" ").slice(22);
+        member.ban().then(() => {
           const info = new Discord.RichEmbed()
           .setAuthor("Cyril | Mod", message.author.avatarURL)
           .addField(`:triumph: Successfully kicked:`,  `${user}`)
-          .addField(`This User/Bot was kicked because: `, `${kickReason}`)
+          .addField(`This User/Bot was kicked because: `, `${banReason}`)
           .setColor('#F39C12')
           .setTimestamp();
-      message.channel.send(info)
-        }).then(() => {
-          message.reply(`Successfully banned ${user.tag}`);
+          message.channel.send(info)
         }).catch(err => {
           message.reply('I was unable to ban the member');
           console.error(err);
