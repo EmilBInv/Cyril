@@ -5,7 +5,7 @@ exports.run = (AI, message, args) => {
       const member = message.guild.member(user);
       if (member) {
         let banReason = args.join(" ").slice(22);
-        member.ban().then(() => {
+        member.ban().then() => {
           const info = new Discord.RichEmbed()
           .setAuthor("Cyril | Mod", message.author.avatarURL)
           .addField(`:triumph: Successfully kicked:`,  `${user}`)
@@ -16,7 +16,7 @@ exports.run = (AI, message, args) => {
         }).catch(err => {
           message.reply('I was unable to ban the member');
           console.error(err);
-        );
+        });
       } else {
         message.reply('That user isn\'t in this guild!');
       }
