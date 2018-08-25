@@ -33,17 +33,17 @@ AI.on("message", async (message) => {
           .setColor("#7429AA")
           .setTimestamp()
           message.channel.send(embed);
-          // Or just do message.delete();
      }
    if (message.content.indexOf(config.prefix) !== 0) return;
    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
    const command = args.shift().toLowerCase();
      
-   //-----------------Banned Words-----------------
-   //----------------------------------------------
-   /*let edit = message.content.replace(/asshole/gi, messageReplace);
-    message.delete();
-    message.channel.send(`${message.author.username}: ${edit}`);*/
+   //---------------Server Greeting-----------------------
+   AI.on('guildMemberAdd', member => {
+        const channel = member.guild.channels.find(ch => ch.name === 'member-log');
+        if (!channel) return;
+        channel.send(`:hype: Welcome to the server, ${member}`);
+   });
 
    try {
         if (message.channel.type === "dm") {
