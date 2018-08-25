@@ -9,8 +9,8 @@ exports.run = (AI, message, args) => {
       const info = new Discord.RichEmbed()
       .setAuthor("Cyril | Mod", "")
       .addField(`:triumph: Successfully kicked:`,  `${user}`)
-      .addField(`This User was kicked because: `, `${kickReason}`)
-      .setColor('#424949')
+      .addField(`This User/Bot was kicked because: `, `${kickReason}`)
+      .setColor('#F39C12')
       .setTimestamp();
       message.channel.send(info)
     }).catch(err => {
