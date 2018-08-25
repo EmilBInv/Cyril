@@ -5,7 +5,7 @@ exports.run = (AI, message, args) => {
       const member = message.guild.member(user);
       if (member) {
         let banReason = args.join(" ").slice(22);
-        member.ban('Optional reason that will display in the audit logs').then() => {
+        member.ban('Optional reason that will display in the audit logs').then(() => {
           const info = new Discord.RichEmbed()
           .setAuthor("Cyril | Mod", message.author.avatarURL)
           .addField(`:triumph: Successfully kicked:`,  `${user}`)
