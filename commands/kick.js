@@ -5,7 +5,11 @@ exports.run = (AI, message, args) => {
       const member = message.guild.member(user);
     if (member) {
       member.kick('Optional reason that will display in the audit logs').then(() => {
-      message.reply(`Successfully kicked ${user.tag}`);
+      const info = new Discord.RichEmbed()
+      .setAuthor("Cyril | Mod", "")
+      .addField(`Successfully kicked:`,  `${user.avatarURL}`)
+      .setColor('#2E86C1')
+      message.channel.send(info)
     }).catch(err => {
           message.reply('Sorry, I was unable to kick the member :frown:');
           console.error(err);
