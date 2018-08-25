@@ -16,7 +16,7 @@ exports.run = (AI, message, args) => {
         }).catch(err => {
           message.reply('I was unable to ban the member');
           console.error(err);
-        });
+        );
       } else {
         message.reply('That user isn\'t in this guild!');
       }
