@@ -21,6 +21,6 @@ exports.run = (AI, message, args) => {
         message.reply('That user isn\'t in this guild!');
       }
     } else {
-      message.reply('Mmm.. You didn\'t mention the user to kick. :| ');
+      message.reply('Mmm.. You didn\'t mention the user to kick. :\ ');
     }
   }
